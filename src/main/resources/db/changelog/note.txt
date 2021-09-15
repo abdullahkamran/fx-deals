@@ -1,0 +1,5 @@
+If data base is not created, create it using:
+
+CREATE DATABASE fxDeals;
+
+OR, use Dspring.profiles.include=dev as application VM options to use H2 in memory databse.
