@@ -3,7 +3,9 @@
 A demo application made in Spring Boot and Angular
 
 ## Build
-Do a Maven clean install. This will also run api unit tests, frontend unit tests, and frontend e2e tests.
+To deploy ui app and build api, do a Maven clean install. This will build also run api unit tests, frontend unit tests, and frontend e2e tests.
+
+Frontend can also be deployed separately using `npm run deploy` in `src/fx-ui`.
 
 ### Spring Boot API
 - Maven used for project structure
