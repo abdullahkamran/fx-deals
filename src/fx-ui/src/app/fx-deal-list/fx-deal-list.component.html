@@ -1,0 +1,13 @@
+
+<mat-card>
+
+<div class="container">
+  <div class="row">
+    <h3>All FX Deals</h3>
+  </div>
+    
+  <div class="row" *ngFor="let fxDeal of fxDeals">
+    <fx-deal [fxDeal]="fxDeal"></fx-deal>
+  </div>
+</div>
+</mat-card>

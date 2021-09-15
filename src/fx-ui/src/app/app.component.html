@@ -1,0 +1,38 @@
+<app-top-bar></app-top-bar>
+
+<div class="spinner-overlay" *ngIf="loading">
+  <mat-spinner class="spinner"></mat-spinner>
+</div>
+
+<div
+  *ngIf="alertState.visible"
+  class="alert"
+  [ngClass]="{'alert-danger': alertState.status==='danger', 'alert-success': alertState.status==='success'}">
+  <span class="alert-text">
+    {{ alertState.message }}
+  </span>
+</div>
+
+<div class="container align-right">
+  <button
+    mat-button
+    color="primary"
+    (click)="openDialog()">
+    Create Fx Deal
+  </button>
+</div>
+
+<div class="container">
+  <div class="row">
+    <fx-deal-search
+      (alert)="setAlertState($event)"
+      (loading)="onLoading($event)">
+    </fx-deal-search>
+  </div>
+  <div class="row">
+    <fx-deal-list #list
+      (alert)="setAlertState($event)"
+      (loading)="onLoading($event)">
+    </fx-deal-list>
+  </div>
+</div>

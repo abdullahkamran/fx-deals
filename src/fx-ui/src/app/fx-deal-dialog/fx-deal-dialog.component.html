@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Create FX Deal</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="dealForm" (change)="formChange()">
+    <label for="id">Deal Unique Id *</label>
+    <input id="id" type="text" maxlength="255" formControlName="id" required>
+  
+    <label for="fromCurrency">From Currency (Ordering Currency) *</label>
+    <input id="fromCurrency" type="text" minlength="3" maxlength="3"
+      formControlName="fromCurrency" required pattern="[a-zA-Z]+"
+    >
+
+    <label for="toCurrency">To Currency *</label>
+    <input id="toCurrency" type="text" minlength="3" maxlength="3"
+      formControlName="toCurrency" required pattern="[a-zA-Z]+"
+    >
+  
+    <label for="amount">Amount (In Ordering Currency) *</label>
+    <input id="amount" min="0" type="number" formControlName="amount" required>
+  
+    <p>Complete the form to enable Create button.</p>
+    <p>(Timestamp will be auto-generated on frontend)</p>
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="dealForm.value"
+      type="submit" [disabled]="!dealForm.valid">
+      Create
+    </button>
+  </form>
+</mat-dialog-content>

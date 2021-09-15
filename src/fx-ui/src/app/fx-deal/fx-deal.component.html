@@ -1,0 +1,42 @@
+<mat-card class="deal-card" *ngIf="fxDeal">
+  <div class="row">
+    <div class="column">
+      <strong>Deal Unique Id</strong>
+    </div>
+    <div class="column">
+      {{ fxDeal.id }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <strong>From Currency (Ordering currency)</strong>
+    </div>
+    <div class="column">
+      {{ fxDeal.fromCurrency }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <strong>To Currency</strong>
+    </div>
+    <div class="column">
+      {{ fxDeal.toCurrency }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <strong>Timestamp</strong>
+    </div>
+    <div class="column">
+      {{ fxDeal.timestamp }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <strong>Amount</strong>
+    </div>
+    <div class="column">
+      {{ fxDeal.amount }}
+    </div>
+  </div>
+</mat-card>
