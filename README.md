@@ -2,6 +2,8 @@
 
 A demo application made in Spring Boot and Angular
 
+![img.png](img.png)
+
 ## Build
 To deploy ui app and build api, do a Maven clean install. This will build also run api unit tests, frontend unit tests, and frontend e2e tests.
 
